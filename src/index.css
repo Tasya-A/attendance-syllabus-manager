@@ -1,0 +1,35 @@
+/* src/index.css */
+
+/* 1. Remove all default browser spacing that causes the white gaps */
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  height: 100%;
+  overflow-x: hidden; /* This stops the page from being cut off on the right */
+}
+
+/* 2. Force the React container to take up the FULL screen width */
+#root {
+  width: 100% !important;
+  max-width: 100% !important; /* This overrides your old 1126px limit */
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left; /* Changes your old 'center' alignment back to normal */
+}
+
+/* 3. Global box sizing for perfect alignment */
+* {
+  box-sizing: border-box;
+}
+
+/* 4. Ensure links don't have default underlines and stay WHITE */
+a {
+  text-decoration: none;
+  color: inherit; /* This makes the link take the color of the text around it */
+}
+
+/* Specific fix for Dashboard/Attendance sections */
+a[href^="mailto:"], a[href^="tel:"] {
+  color: white !important; 
+}
